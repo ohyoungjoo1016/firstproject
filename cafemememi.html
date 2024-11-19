@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        @font-face{font-family:"FuturaStd-Book";src:url(font/FuturaStd-Book.woff);}
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            font-family:"FuturaStd-Book";
+            }
+        a{
+            text-decoration: none;
+          
+        }
+        #wrap{
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        #wrap .main_bg{
+            width: 100%;
+            height: 600px;
+            background: url(images/common/hd_visual.png)no-repeat;
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+        }
+        .main_logo{
+            width: 250px;
+            height: 100px;
+            position: absolute;
+            top:45%;
+            left:40.5%;
+            background: url(images/common/neon_logo2.png)no-repeat;
+            background-size: cover;
+            }
+        .header{
+            width: 1500px;
+            height: 80px;
+            margin: 0 auto;
+            border:1px solid red;
+             }
+        .navi{
+            width: 800px;
+            height: 100%;
+            position: relative;
+            left:200px;
+            border:1px solid red;
+        }
+        .navi>li{
+            width: 130px;
+            height: 30px;
+            float: left;
+            border:1px solid blue;
+            margin-top: 50px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 12px;
+            transition: all 1s;
+        }
+        .navi>li>a{
+            display: block;
+            color: #000;
+        }
+        .navi>li:hover>a{
+            color:hotpink;
+        }
+        .navi>li:last-child{
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            transition: all 1s;
+            z-index: 99;
+        }
+        .navi:hover>li:last-child{
+            height: 400px;
+            background: rgba(250, 250, 250, 0.95);
+        }
+        .smenu{
+            width: 100%;
+            height: 300px;
+            margin-top: 40px;
+            position: relative;
+            z-index: 999;
+            opacity: 0;
+            transition: all 1s;
+           }
+        .navi>li:hover>.smenu{
+            opacity: 1;
+        }
+        .smenu>li{
+           text-align: left;
+           width: 130px;
+           height: 30px;
+          }
+        .smenu>li>a{
+            display: block;
+            color:black;
+         }
+        .smenu>li:nth-child(5){
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 50px;
+            left: 190px
+        }
+        .smenu>li>p:nth-child(1){
+            text-decoration: solid black;
+            position: absolute;
+            top:-100px;
+        }
+        .smenu>li:nth-child(6){
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 50px;
+            left: 400px
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="wrap">
+       <div class="main_bg">
+       <div class="main_logo"></div>
+       </div>
+       <div class="header">
+        <ul class="navi">
+            <li><a href="#">MeMeMi</a>
+            <ul class="smenu">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Pleasure</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Cantect US</a></li>
+                <li><a href="#"><img src="images/common/19_0.png">
+                    <p>About MiMiMi</p><p>컬렉트 카페 미미를 소개합니다.</p><b>Read More+</b></a></li>
+                <li><a href="#"><img src="images/index_img/photo_27.png">
+                    <p>About MILANO</p><p>via,Berera 23</p><b>이탈리아 밀라노점</b></a></li>
+              </ul>
+            </li>
+            <li><a href="#">Penthouse</a>
+                <ul class="smenu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Reservation</a></li>
+                    <li><a href="#"><img src="images/common/20_1.png">
+                    <p>Penthouse</p></a></li>
+                </ul>
+            </li>
+            <li><a href="#">Garden</a>
+                <ul class="smenu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#"><img src="images/common/25_0.png">
+                    <p>Garden</p></a></li>
+                </ul>
+            </li>
+            <li><a href="#">Kitchen</a>
+            <ul class="smenu">
+                <li><a href="#">Kichen</a></li>
+                <li><a href="#">Brench Plate</a></li>
+                <li><a href="#">Rice</a></li>
+                <li><a href="#">Pizza</a></li>
+                <li><a href="#">Bread & Cookie</a></li>
+                <li><a href="#">+ Season Menu</a></li>
+                <li><a href="#"><img src="images/common/20_2.png">
+                    <p>New Menu</p><p>Wonder Watermelon</p><b>원더 워터멜론(I)</b></a></li>
+                <div class="smenu_01">
+                    <li><a href="#">Salad</a></li>
+                    <li><a href="#">Pasta</a></li>
+                    <li><a href="#">Steak</a></li>
+                    <li><a href="#">Side</a></li>
+                    <li><a href="#">Cake</a></li>
+                    <li><a href="#">Bakery</a></li>
+                </div>
+            </ul>
+            </li>
+            <li><a href="#">Caffe</a>
+                <ul class="smenu">
+                    <li><a href="#">Caffe</a></li>
+                    <li><a href="#">Espresso</a></li>
+                    <li><a href="#">Tea</a></li>
+                    <li><a href="#">Others</a></li>
+                    <li><a href="#">Fresh juice</a></li>
+                    <li><a href="#">Granita</a></li>
+                    <li><a href="#">Dessert</a></li>
+                    <li><a href="#"><img src="images/common/20_2.png">
+                        <p>New Menu</p><p>Wonder Watermelon</p><b>원더 워터멜론(I)</b></a></li>
+                    <div class="smenu_01">
+                        <li><a href="#">+ Season Menu</a></li>
+                        <li><a href="#">Coffee</a></li>
+                        <li><a href="#">Tea Latte</a></li>
+                        <li><a href="#">Smoothie</a></li>
+                        <li><a href="#">Ice Cream</a></li>
+                        <li><a href="#">Food</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li><a href="#">Collective Shop</a>
+                    <ul class="smenu">
+                        <li><a href="#">Bakery</a></li>
+                        <li><a href="#">Kichen</a></li>
+                        <li><a href="#">product</a></li>
+                        <li><a href="#"><img src="images/common/19_0.png">
+                            <p>Product</p><p>미미미 아트피스 캔버스 토트백</p><b>Read More+</b></a></li>
+                            <li><a href="#"><img src="images/common/product02.png">
+                            <p>Product</p><p>미미미 아트피스 캔버스 파우치</p><b>Read More+</b></a></li>
+                    </ul>
+              </li>
+              <li><a href="#"></a></li>
+            </ul>
+              
+       </div>
+       <div class="info">
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">My page</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Cart(0)</a></li>
+            <li><a href="#"></a></li>
+        </ul>
+       </div>
+    </div>
+    <script>
+        var hd=$('.navibar');	
+        $(window).scroll(function(){
+        var h=$(window).scrollTop();	   
+        
+        if(h > 680){
+        hd.css({position:'fixed',top:'0'});
+        hd.stop().animate({opacity:'0'}, 0);
+        hd.stop().animate({opacity:'1'}, 200);
+        
+        }else{
+        hd.css({display:'block'});
+        hd.css({position:'relative',top:'0'});
+        hd.stop().animate({opacity:'1'}, 0);
+        } 
+        });
+        $(window).trigger('scroll');
+            
+        </script>
+</body>
+</html>

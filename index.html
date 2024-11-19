@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+@font-face{font-family:"FuturaStd-Book";src:url(font/FuturaStd-Book.woff);}
+
+*{margin: 0; padding: 0; font-family: 'FuturaStd-Book';}
+html{width: 100%;/* height: 100%;*/ height: 2000px;}
+body{width: 100%; height: 100%;}
+.topBanner{background: url(images/common/hd_visual.png) no-repeat center center; background-size: cover; width: 100%; height:650px;position: relative;}
+.topLogo{background: url(images/common/n_logo2.png);width: 500px; height:497px;position: absolute; left: 50%; top: 50%;transform: translate(-50%,-50%); }
+
+.navibar{width: 100%; height: 80px;position: relative;}
+.nav{width: 708px; height: 80px;  margin: 0 auto;list-style: none;}
+.nav>li{width: 118px; height: 100%; float: left;}
+.nav>li>a{display: block; width: 100%; height: 100%; text-align: center; line-height: 80px; color: black; text-decoration: none;font-size: 10pt;}
+.nav>li:hover>a{color:#ff56ba;}
+.nav>li:last-child{position: absolute;top: 50%;left: 0;  width: 100%; height: 0;overflow: hidden; transition: 0.3s all;z-index: -1;}
+.nav:hover>li:last-child{height:450px;background-color:rgba(250, 250, 250, 0.95);}
+
+.smenu{list-style: none; width: 708px; height: 400px; position: relative; z-index: 9999; overflow: hidden;display: none; transition: 0.5s all;}
+.nav>li:hover>.smenu{display: block;}
+.nav>li>.smenu>li>a{color: #000;text-decoration: none;font-size: 0.9em; }
+.nav>li>.smenu>.list{width: 236px;height: 50px;padding-left: 20px; box-sizing: border-box;}
+.list>a{display: block; width: 100%; height: 50px;line-height: 50px;}
+/*각각의 서브메뉴의 시작점을 맞춰주기 위해*/
+.nav>li:nth-child(2) .smenu{position: relative; left: -118px;}
+.nav>li:nth-child(3) .smenu{position: relative; left: -236px;}
+.nav>li:nth-child(4) .smenu{position: relative; left: -354px;}
+.nav>li:nth-child(5) .smenu{position: relative; left: -472px;}
+.nav>li:nth-child(6) .smenu{position: relative; left: -590px;}
+/*smenu중 이미지링크 위치 지정*/
+.ul_img{width: 220px; height: 320px;position: relative; top: -140px; left: 230px;}
+.ul_img img{position: absolute;top: 50px;/* width: 200px; height: 200px;*/left: 50%; transform: translateX(-50%);}
+.ul_img p:nth-of-type(1){position: absolute;top: 10px; color: #000;text-align: center; text-decoration: underline;width: 100%;}
+.ul_img p:nth-of-type(2){position: absolute;bottom: 30px; color: #666;text-align: center; font-size: 8pt; width: 100%; height: 25px;line-height: 25px; }
+.ul_img b{position: absolute;bottom: 0px; display: block; left: 50%; transform: translateX(-50%);color: #000;width: 150px; text-align: center;}
+.img2{left: 480px; top: -460px;}
+/*li:2번째 서브메뉴*/
+.nav>li .smenu>.moveRight{position: absolute; top: 0;left: 236px;}
+/*25째줄에서 위치옮겨준 클래스 수정*/
+.nav>li>.smenu>.moveRight>li>a{color: #000;text-decoration: none;font-size: 0.9em; padding-left: 20px; box-sizing: border-box;}
+/*li:3번째 서브메뉴 이미지 위치 조정*/
+.nav>li:nth-child(3) .ul_img{top: -290px;}
+/*li:4번째 서브메뉴 이미지 조정*/
+.nav>li:nth-child(4) .ul_img{width: 472px; top: -90px;}
+/*li:5번째 서브메뉴 이미지 위치 조정*/
+.nav>li:nth-child(5) .ul_img{float: left;top: 0;left: 0;}
+.img_container{margin: 0 auto;width: 660px; height: 320px; }
+/*li:6번째 서브메뉴 이미지 위치 조정*/
+.nav>li:nth-child(6) .ul_img{top: -380px; float: left;}
+</style>
+</head>
+<body>
+<div class="topBanner">
+<div class="topLogo"></div>
+</div>
+<div class="navibar">
+<ul class="nav">
+<li><a href="#">MeMeMi</a>
+<ul class="smenu">
+<li class="list"><a href="#">About</a></li>
+<li class="list"><a href="#">Location</a></li>
+<li class="list"><a href="#">Contact Us</a></li>
+<div class="ul_img img1"><a href="#"><img src="images/common/gnbPhoto01.png">
+<p>About MeMeMi</p><p>콜렉트 카페 미미미를 소개합니다.</p><b>Read More+</b>
+</a></div>
+<li class="ul_img img2"><a href="#">
+<p>In MILANO</p><img src="images/common/gnbPhoto02.png"><p>VIA,BRERA, 23</p><b>이탈리아 밀라노점</b>
+</a></li>
+</ul>
+</li>
+<li><a href="#">Kitchen</a>
+<ul class="smenu">
+<li class="list"><a href="#">Salad</a></li>
+<li class="list"><a href="#">Brunch Plate</a></li>
+<li class="list"><a href="#">Pasta</a></li>
+<li class="list"><a href="#">Rice</a></li>
+<li class="list"><a href="#">Steak</a></li>
+<li class="list"><a href="#">Pizza</a></li>
+<li class="list"><a href="#">Side</a></li>
+<div class="moveRight">
+<li class="list"><a href="#">Bread & Cookie</a></li>
+<li class="list"><a href="#">Cake</a></li>
+<li class="list"><a href="#">+Season Menu</a></li>
+
+<li class="ul_img"><a href="#">
+<p>New Menu</p><img src="images/common/13_2.png" width="200" height="200"><p>씨푸드 스테이크 플래터</p>
+</a></li></div>
+</ul>
+</li>
+<li><a href="#">Caffè</a>
+<ul class="smenu">
+<li class="list"><a href="#">+Season Menu</a></li>
+<li class="list"><a href="#">Espresso</a></li>
+<li class="list"><a href="#">Coffee</a></li>
+<li class="list"><a href="#">Tea</a></li>
+<li class="list"><a href="#">Tea Latte</a></li>
+<li class="list"><a href="#">Others</a></li>
+<li class="list"><a href="#">Ade</a></li>
+<div class="moveRight">
+<li class="list"><a href="#">Fresh Juice</a></li>
+<li class="list"><a href="#">Smoothie</a></li>
+<li class="list"><a href="#">Granita</a></li>
+<li class="list"><a href="#">Ice Cream</a></li>
+<li class="list"><a href="#">Dessert</a></li>
+<li class="list"><a href="#">Food</a></li>
+<li class="ul_img"><a href="#">
+<p>New Menu</p><img src="images/common/20_0.png"><p>프루티 파라다이스</p>
+</a></li>
+</div>
+</ul>
+</li>
+<li><a href="#">Lifestyle</a>
+<ul class="smenu">
+<li class="list"><a href="#"></a>Polspotten</li>
+<li class="list"><a href="#"></a>Qeeboo</li>
+<li class="ul_img"><a href="#">
+<p>Polspotten</p><img src="images/common/gnbPhoto05.png">
+</a></li>
+</ul>
+</li>
+<li><a href="#">Trend</a>
+<ul class="smenu">
+<div class="img_container">
+<li class="ul_img"><a href="#">
+<p>Food</p><img src="images/common/16_8.png" width="200" height="200"><p>왠지 모르게 설레는 날 ♥</p><b>Read More+</b>
+</a></li>
+<li class="ul_img"><a href="#">
+<p>Lifestyle</p><img src="images/common/26_1.png"><p>원하는 만큼의 시원함과 따뜻함♥</p><b>Read More+</b>
+</a></li>
+<li class="ul_img"><a href="#">
+<p>Culture</p><img src="images/common/gnbPhoto08.png"><p>Inspired By Distinctive Tableware</p><b>Read More+</b>
+</a></li></div>
+</ul>
+</li>
+<li><a href="#">Collective Shop</a>
+<ul class="smenu">
+<li class="list"><a href="#">ALL</a></li>
+<li class="list"><a href="#">Table</a></li>
+<li class="list"><a href="#">Chair</a></li>
+<li class="list"><a href="#">Stool</a></li>
+<li class="list"><a href="#">Object</a></li>
+<li class="list"><a href="#">Lighting</a></li>
+<li class="list"><a href="#">Product</a></li>
+<li class="list"><a href="#">Meal Kit</a></li>
+<li class="ul_img"><a href="#">
+<p>Table</p><img src="images/common/photo_51.png" width="200" height="200"><p>PINEAPPLE JAR MULTI PINK</p><b>View More+</b>
+</a></li>
+<li class="ul_img"><a href="#">
+<p>Stool</p><img src="images/common/gnbPhoto10.jpg"><p>Zig Zag Pink</p><b>View More+</b>
+</a></li>
+</ul>
+</li>
+<li><a href="#"></a></li>
+</ul>
+</div>
+
+<script>
+var hd=$('.navibar');	
+$(window).scroll(function(){
+var h=$(window).scrollTop();	   
+
+if(h > 680){
+hd.css({position:'fixed',top:'0'});
+hd.stop().animate({opacity:'0'}, 0);
+hd.stop().animate({opacity:'1'}, 200);
+
+}else{
+hd.css({display:'block'});
+hd.css({position:'relative',top:'0'});
+hd.stop().animate({opacity:'1'}, 0);
+} 
+});
+$(window).trigger('scroll');
+    
+</script>
+</body>
+</html>
