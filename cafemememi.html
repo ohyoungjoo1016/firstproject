@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+<!-- jQuery library -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="js/jquery.bxslider.js"></script>
     <style>
         @font-face{font-family:"FuturaStd-Book";src:url(font/FuturaStd-Book.woff);}
         *{
@@ -37,33 +42,71 @@
             height: 100px;
             position: absolute;
             top:45%;
-            left:40.5%;
+            left:42%;
             background: url(images/common/neon_logo2.png)no-repeat;
             background-size: cover;
             }
         .header{
-            width: 1500px;
+            width: 100%;
             height: 80px;
             margin: 0 auto;
-            border:1px solid red;
+           
              }
+         .logo01{
+            width: 150px;
+            height: 80px;
+            position: absolute;
+            background: url(images/common/mememi.png)no-repeat;
+            background-position: center center;
+             }
+        .info{
+            width: 300px;
+            height: 30px;
+            position: absolute;
+            margin-top: -45px;
+            right:0;
+          }
+        .info ul{
+            width: 100%;
+            height: 100%;
+        }
+        .info ul li{
+            width: 50px;
+            height: 30px;
+            float:left;
+           
+        }
+        .info ul li:last-child a{
+            width: 22px;
+            height: 20px;
+            background: url(images/common/menuTool03.png)no-repeat;
+            background-size: cover;
+            color:#000;
+        }
+        .info ul li a{
+            display: block;
+            color:gray;
+            font-size: 12px;
+        }
         .navi{
-            width: 800px;
+            width: 100%;
             height: 100%;
             position: relative;
-            left:200px;
-            border:1px solid red;
-        }
+            left: 400px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+           }
         .navi>li{
-            width: 130px;
+            width: 100px;
             height: 30px;
             float: left;
-            border:1px solid blue;
-            margin-top: 50px;
+            margin-top: 30px;
             text-align: center;
             line-height: 30px;
-            font-size: 12px;
-            transition: all 1s;
+            font-size: 13px;
+            transition: all 0.3s;
+          
         }
         .navi>li>a{
             display: block;
@@ -74,12 +117,12 @@
         }
         .navi>li:last-child{
             position: absolute;
-            top: 30px;
-            left: 0;
+            top: 50px;
+            left: -400px;
             width: 100%;
             height: 0;
             overflow: hidden;
-            transition: all 1s;
+            transition: all 0.3s;
             z-index: 99;
         }
         .navi:hover>li:last-child{
@@ -89,11 +132,12 @@
         .smenu{
             width: 100%;
             height: 300px;
-            margin-top: 40px;
+            margin-top: 50px;
             position: relative;
             z-index: 999;
             opacity: 0;
-            transition: all 1s;
+            transition: all 0.3s;
+            left:-100px;
            }
         .navi>li:hover>.smenu{
             opacity: 1;
@@ -108,24 +152,110 @@
             color:black;
          }
         .smenu>li:nth-child(5){
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             position: absolute;
             top: 50px;
-            left: 190px
+            left: 250px;
+            background-position: center center;
         }
-        .smenu>li>p:nth-child(1){
-            text-decoration: solid black;
+        .smenu li:nth-child(5) p{
+            text-decoration: underline;
             position: absolute;
-            top:-100px;
+            top: -40px;
+            left: 55px;
         }
+        .smenu li:nth-child(5) div{
+            font-size: 12px;
+            color: gray;
+            width: 200px;
+            text-align: center;
+            }
+        .smenu li:nth-child(5) h4{
+            width: 200px;
+            height: 20px;
+            text-align: center;
+           }
         .smenu>li:nth-child(6){
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             position: absolute;
             top: 50px;
-            left: 400px
+            left: 470px;
+            background-position: center center;
+            }
+        .smenu li:nth-child(6) p{
+            text-decoration: underline;
+            position: absolute;
+            top: -40px;
+            left: 55px;
         }
+        .smenu li:nth-child(6) div{
+            font-size: 12px;
+            color: gray;
+            width: 200px;
+            text-align: center;
+            }
+        .smenu li:nth-child(6) h4{
+            width: 200px;
+            height: 20px;
+            text-align: center;
+           }
+        .smenu_01{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0px;
+            left: 120px;
+        }
+        .smenu_01 li{
+            width: 100px;
+            height: 20px;
+             }
+        .smenu_01 li a{
+            display: block;
+            color:black;
+        }
+        .bx{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            position: relative;
+        }
+        .bxslider{
+            width: 50%;
+            position: absolute;
+            background-position: center center;
+            left: 0;
+          
+        }
+        .bxslider li p{
+            color:white;
+            width: 450px;
+            height: 80px;
+            font-size: 35px;
+            position: absolute;
+            font-weight: bold;
+            top: 20px;
+            left: 250px;
+           }
+         .bx_bg{
+            width: 50%;
+            position: absolute;
+            right:0;
+        }
+        .bx_bg p{
+            color:white;
+            width: 300px;
+            height: 80px;
+            font-size: 35px;
+            position: absolute;
+            font-weight: bold;
+            top: 20px;
+            left: 20px;
+           }
     </style>
 </head>
 <body>
@@ -135,6 +265,7 @@
        <div class="main_logo"></div>
        </div>
        <div class="header">
+        <div class="logo01"></div>
         <ul class="navi">
             <li><a href="#">MeMeMi</a>
             <ul class="smenu">
@@ -143,15 +274,17 @@
                 <li><a href="#">Location</a></li>
                 <li><a href="#">Cantect US</a></li>
                 <li><a href="#"><img src="images/common/19_0.png">
-                    <p>About MiMiMi</p><p>컬렉트 카페 미미를 소개합니다.</p><b>Read More+</b></a></li>
+                    <p>About MiMiMi</p><div>미미미 가든을 소개합니다.</div><h4>Read More+</h4></a></li>
                 <li><a href="#"><img src="images/index_img/photo_27.png">
-                    <p>About MILANO</p><p>via,Berera 23</p><b>이탈리아 밀라노점</b></a></li>
+                    <p>About MILANO</p><div>via,Berera 23</div><h4>이탈리아 밀라노점</h4></a></li>
               </ul>
             </li>
             <li><a href="#">Penthouse</a>
                 <ul class="smenu">
                     <li><a href="#">About</a></li>
                     <li><a href="#">Reservation</a></li>
+                    <li></li>
+                    <li></li>
                     <li><a href="#"><img src="images/common/20_1.png">
                     <p>Penthouse</p></a></li>
                 </ul>
@@ -159,6 +292,9 @@
             <li><a href="#">Garden</a>
                 <ul class="smenu">
                     <li><a href="#">About</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                     <li><a href="#"><img src="images/common/25_0.png">
                     <p>Garden</p></a></li>
                 </ul>
@@ -169,10 +305,12 @@
                 <li><a href="#">Brench Plate</a></li>
                 <li><a href="#">Rice</a></li>
                 <li><a href="#">Pizza</a></li>
+                <li><a href="#"><img src="images/common/20_2.png">
+                    <p>New Menu</p><div>Wonder Watermelon</div><h4>원더 워터멜론(I)</h4></a></li>
+                    <li></li>
                 <li><a href="#">Bread & Cookie</a></li>
                 <li><a href="#">+ Season Menu</a></li>
-                <li><a href="#"><img src="images/common/20_2.png">
-                    <p>New Menu</p><p>Wonder Watermelon</p><b>원더 워터멜론(I)</b></a></li>
+                
                 <div class="smenu_01">
                     <li><a href="#">Salad</a></li>
                     <li><a href="#">Pasta</a></li>
@@ -189,11 +327,13 @@
                     <li><a href="#">Espresso</a></li>
                     <li><a href="#">Tea</a></li>
                     <li><a href="#">Others</a></li>
+                    <li><a href="#"><img src="images/common/20_2.png">
+                        <p>New Menu</p><div>Wonder Watermelon</div><h4>원더 워터멜론(I)</h4></a></li>
+                        <li></li>
                     <li><a href="#">Fresh juice</a></li>
                     <li><a href="#">Granita</a></li>
                     <li><a href="#">Dessert</a></li>
-                    <li><a href="#"><img src="images/common/20_2.png">
-                        <p>New Menu</p><p>Wonder Watermelon</p><b>원더 워터멜론(I)</b></a></li>
+                    
                     <div class="smenu_01">
                         <li><a href="#">+ Season Menu</a></li>
                         <li><a href="#">Coffee</a></li>
@@ -209,10 +349,11 @@
                         <li><a href="#">Bakery</a></li>
                         <li><a href="#">Kichen</a></li>
                         <li><a href="#">product</a></li>
-                        <li><a href="#"><img src="images/common/19_0.png">
-                            <p>Product</p><p>미미미 아트피스 캔버스 토트백</p><b>Read More+</b></a></li>
-                            <li><a href="#"><img src="images/common/product02.png">
-                            <p>Product</p><p>미미미 아트피스 캔버스 파우치</p><b>Read More+</b></a></li>
+                        <li></li>
+                        <li><a href="#"><img src="images/common/product01.png">
+                        <p>Product</p><div>미미미 아트피스 캔버스 토트백</div><h4>Read More+</h4></a></li>
+                        <li><a href="#"><img src="images/common/product02.png">
+                        <p>Product</p><div>미미미 아트피스 캔버스 파우치</div><h4>Read More+</h4></a></li>
                     </ul>
               </li>
               <li><a href="#"></a></li>
@@ -229,9 +370,65 @@
             <li><a href="#"></a></li>
         </ul>
        </div>
+       <div class="bx">
+       <ul class="bxslider">
+        <li><img src="images/common/main01.jpg" />
+        <p>Memenmi's Summer OASIS</p></li>
+        <li><img src="images/common/main02.jpg" />
+            <p>Welcome To Summer OASIS</p></li>
+        <li><img src="images/common/main03.jpg" />
+            <p>Coolness In Summer OASIS</p></li>
+       </ul>
+       <div class="bx_bg"><img src="images/common/main04.png">
+        <p>Summer OASIS</p></div>
+    </div>
+    <div class="now">
+        <ul class="mememi">MeMeMi Now
+           <li></li>
+           <li>Eat & Life<br>
+           패뷰러스 아트테인먼트 미미미의 소식을 확인하세요</li>
+        </div>
+        <div class="juice">
+            <ul>
+                <li><img src="images/common/20_2.png"></li>
+                <li>Wonder Watermelon<br>
+                원더 워터멜론(l)</li>
+                <li>달콤한 수박에 상큼한 라임이 더해저<br>
+                무더운 여름을 잊게 하는<br>
+                청량감을 선사합니다!</li>
+            </ul>
+            <ul>
+                <li><img src="images/common/20_0.png"></li>
+                <li>Wonderful<br>
+                워터플(l)</li>
+                <li>시원한 수박과 상큼한 라임향이<br>
+                어우려진 에이드.<br>
+                밀라노 본점 미미미의 베스트 여름 메뉴인<br>
+                원터풀을 한국에서도 즐겨보세요!</li>
+            </ul>
+            <ul>
+                <li><img src="images/common/2024_Mango_Pool.png"></li>
+                <li>Mango Pool Granita<br>
+                망고 풀 그라니따</li>
+                <li>리얼 망고의 달콤함과 진한 풍미를<br>
+                드대로 즐기고 싶은<br>
+                당신을 위해 준비했어요.</li>
+            </ul>
+            <ul>
+                <li><img src="images/common/2024_Snow_Mango.png"></li>
+                <li>Snow Mango Shake<br>
+                스노우 망고 쉐이크</li>
+                <li>소프트한 밀크 아이스크림과<br>
+                핸드메이드 망고 베이스.<br>
+                달콤한 망고로 완성하는<br>
+                행복한 순간을 느껴보세요.</li>
+            </ul>
+        </div>
+        
+    </div>
     </div>
     <script>
-        var hd=$('.navibar');	
+        var hd=$('.header');	
         $(window).scroll(function(){
         var h=$(window).scrollTop();	   
         
@@ -249,5 +446,23 @@
         $(window).trigger('scroll');
             
         </script>
+        <script>
+            $(document).ready(function(){
+                  $('.bxslider').bxSlider({
+                     mode: 'horizontal', //슬라이드 위,아래
+                     moveSlides: 1, //슬라이드 이동시 개수 
+                     slideMargin: 40, //슬라이드 사이 여백
+                     infiniteLoop: true, //반복
+                     slideWidth: 960, //슬라이드 너비
+                     minSlides: 1, //슬라이드 최소 노출개수
+                     maxSlides: 1, //슬라이드 최대 노출개수 
+                     speed: 100, //슬라이드 전환 속도
+                  controls:true, //이전, 다음 버튼 노출 
+                  auto:true,  //자동실행여부
+                  pager:true, //동그라미 버튼 노출 여부
+                  autoHover:false,//호버시 애니메이션 정지여부
+                });
+            });   //end
+            </script>
 </body>
 </html>
