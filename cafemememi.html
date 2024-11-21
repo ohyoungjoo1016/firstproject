@@ -92,7 +92,7 @@
             width: 100%;
             height: 100%;
             position: relative;
-            left: 400px;
+            left: 30%;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -118,7 +118,7 @@
         .navi>li:last-child{
             position: absolute;
             top: 50px;
-            left: -400px;
+            left: -550px;
             width: 100%;
             height: 0;
             overflow: hidden;
@@ -256,6 +256,347 @@
             top: 20px;
             left: 20px;
            }
+        .now{
+            width: 100%;
+            height: 750px;
+            background: rgb(252, 247, 248);
+            position: relative;
+            top:-100px;
+        }
+        .mememi{
+            font-family:"FuturaStd-Book";src:url(font/FuturaStd-Book.woff);
+            font-size: 30px;
+            width: 280px;
+            height: 100px;
+            position: relative;
+            top: 80px;
+            left: 45%;
+            
+        }
+        .mememi li:nth-child(1){
+          width: 50px;
+          border-bottom: 2px solid black;
+          position: absolute;
+          margin-top: 20px;
+          left: 70px;
+        }
+        .mememi li:nth-child(2){
+            font-size: 14px;
+            color: gray;
+            text-align: center;
+            margin-top: 50px;
+            position: absolute;
+            left: -55px;
+        }
+        .juice{
+            width: 53%;
+            height: 450px;
+            margin: 0 auto;
+            margin-top: 150px;
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .juice li:nth-child(1){
+            width: 250px;
+            height: 300px;
+            background-size: cover;
+            transition: all 1s;
+        }
+        .juice li:nth-child(2){
+            font-size: 14px;
+            text-align: center;
+            }
+        .juice li:nth-child(3){
+            font-size: 12px;
+            color:gray;
+            text-align: center;
+            margin-top: 20px;
+           }
+        .juice li:nth-child(1):hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        .garden{
+            width: 100%;
+            height: 750px;
+            position: relative;
+            top:-100px;
+        }
+        .gar{
+            font-family:"FuturaStd-Book";src:url(font/FuturaStd-Book.woff);
+            font-size: 30px;
+            width: 280px;
+            height: 100px;
+            position: relative;
+            top: 80px;
+            left: 45%;
+            
+        }
+        .gar li:nth-child(1){
+          width: 50px;
+          border-bottom: 2px solid black;
+          position: absolute;
+          margin-top: 20px;
+          left: 70px;
+        }
+        .gar li:nth-child(2){
+            font-size: 14px;
+            color: gray;
+            text-align: center;
+            margin-top: 50px;
+            position: absolute;
+            left: 0;
+        }
+        .res{
+            width: 52%;
+            height: 650px;
+            margin: 0 auto;
+            margin-top: 150px;
+            position: relative;
+            border:1px solid red;
+            display: flex;
+            flex-wrap: nowrap;
+         }
+         .res li:nth-child(1){
+            width: 316px;
+            height: 430px;
+            position: absolute;
+            background: url(images/common/14_0.jpg)no-repeat;
+            transition: all 1s;
+         }
+         .res li:nth-child(1) p{
+            color:#fff;
+            position: absolute;
+            top:200px;
+            left: 120px;
+            opacity: 0;
+            transition: all 1s;
+            z-index: 999;
+         }
+         .res li:nth-child(1) a{
+            display: block;
+            margin: 230px 120px;
+            color:white;
+            text-decoration: underline;
+            opacity: 0;
+            transition: all 1s;
+            }
+         .res li:nth-child(1) a::before{
+             content: "";
+             display: block;
+             position: absolute;
+             width: 316px;
+             height: 430px;
+             background: rgba(0,0,0,0.5);
+             top: 0;
+             left: 0;
+             opacity: 0;
+             transition: all 1s;
+            
+             }
+         .res li:nth-child(1) a:hover::before,
+         .res li:nth-child(1) a:hover,
+         .res li:nth-child(1):hover p{
+            opacity: 1;
+         }
+         
+         .res li:nth-child(2){
+            width: 316px;
+            height: 200px;
+            position: absolute;
+            background: url(images/common/14_1.jpg)no-repeat;
+            left:336px;
+         }
+         .res li:nth-child(2) p{
+            color:#fff;
+            top:50px;
+            left: 90px;
+            position: absolute;
+            opacity: 0;
+            text-align: center;
+            transition: all 1s;
+            font-size: 12px;
+            z-index: 999;
+          }
+         .res li:nth-child(2) a{
+            display: block;
+            color:white;
+            text-decoration: underline;
+            margin-left: 120px;
+            margin-top: 130px;
+            opacity: 0;
+            transition: all 1s;
+            z-index: 99;
+            }
+         .res li:nth-child(2) a:before{
+             content: "";
+             display: block;
+             position: absolute;
+             width: 316px;
+             height: 200px;
+             background: rgba(0,0,0,0.5);
+             top: 0;
+             left: 0;
+             opacity: 0;
+             transition: all 1s;
+            
+             }
+         .res li:nth-child(2) a:hover::before,
+         .res li:nth-child(2) a:hover,
+         .res li:nth-child(2):hover p{
+            opacity: 1;
+         }
+
+         .res li:nth-child(3){
+            width: 316px;
+            height: 430px;
+            position: absolute;
+            background: url(images/common/14_2.jpg)no-repeat;
+            right:0;
+         }
+         .res li:nth-child(3) p{
+            color:#fff;
+            margin-top: 150px;
+            margin-left: 20px;
+            opacity: 0;
+            text-align: center;
+            transition: all 1s;
+            font-size: 12px;
+          }
+         .res li:nth-child(3) a{
+            display: block;
+            color:white;
+            text-decoration: underline;
+            margin-left: 130px;
+            margin-top: 20px;
+            opacity: 0;
+            transition: all 1s;
+            }
+         .res li:nth-child(3)::before{
+             content: "";
+             display: block;
+             position: absolute;
+             width: 316px;
+            height: 430px;
+             background: rgba(0,0,0,0.5);
+             top: 0;
+             left: 0;
+             opacity: 0;
+             transition: all 1s;
+            
+             }
+         .res li:nth-child(3) a:hover::before,
+         .res li:nth-child(3) a:hover,
+         .res li:nth-child(3):hover p{
+            opacity: 1;
+         }
+
+         .res li:nth-child(4){
+            width: 316px;
+            height: 200px;
+            position: absolute;
+            background: url(images/common/14_3_.jpg)no-repeat;
+            top:450px;
+         }
+         .res li:nth-child(4) a{
+            display: block;
+            color:white;
+            text-decoration: underline;
+            margin-left: 130px;
+            margin-top: 90px;
+            opacity: 0;
+            transition: all 1s;
+            }
+         .res li:nth-child(4) a::before{
+             content: "";
+             display: block;
+             position: absolute;
+             width: 316px;
+            height: 200px;
+             background: rgba(0,0,0,0.5);
+             top: 0;
+             left: 0;
+             opacity: 0;
+             transition: all 1s;
+            
+             }
+         .res li:nth-child(4) a:hover::before,
+         .res li:nth-child(4) a:hover{
+            opacity: 1;
+         }
+
+
+         .res li:nth-child(5){
+            width: 316px;
+            height: 430px;
+            position: absolute;
+            background: url(images/common/14_4.jpg)no-repeat;
+            top: 220px;
+            left:336px;
+         }
+         .res li:nth-child(5) a{
+            display: block;
+            color:white;
+            text-decoration: underline;
+            margin-left: 130px;
+            margin-top: 210px;
+            opacity: 0;
+            transition: all 1s;
+            }
+         .res li:nth-child(5) a::before{
+             content: "";
+             display: block;
+             position: absolute;
+             width: 316px;
+            height: 430px;
+             background: rgba(0,0,0,0.5);
+             top: 0;
+             left: 0;
+             opacity: 0;
+             transition: all 1s;
+            
+             }
+         .res li:nth-child(5) a:hover::before,
+         .res li:nth-child(5) a:hover{
+            opacity: 1;
+         }
+
+
+         .res li:nth-child(6){
+            width: 316px;
+            height: 200px;
+            position: absolute;
+            background: url(images/common/14_5_.jpg)no-repeat;
+            top: 450px;
+            right:0;
+         }
+         .res li:nth-child(6) a{
+            display: block;
+            color:white;
+            text-decoration: underline;
+            margin-left: 130px;
+            margin-top: 90px;
+            opacity: 0;
+            transition: all 1s;
+            }
+         .res li:nth-child(6) a::before{
+             content: "";
+             display: block;
+             position: absolute;
+             width: 316px;
+            height: 200px;
+             background: rgba(0,0,0,0.5);
+             top: 0;
+             left: 0;
+             opacity: 0;
+             transition: all 1s;
+            
+             }
+         .res li:nth-child(6) a:hover::before,
+         .res li:nth-child(6) a:hover{
+            opacity: 1;
+         }
     </style>
 </head>
 <body>
@@ -358,9 +699,7 @@
               </li>
               <li><a href="#"></a></li>
             </ul>
-              
-       </div>
-       <div class="info">
+        <div class="info">
         <ul>
             <li><a href="#">Login</a></li>
             <li><a href="#">Join</a></li>
@@ -370,6 +709,7 @@
             <li><a href="#"></a></li>
         </ul>
        </div>
+    </div>
        <div class="bx">
        <ul class="bxslider">
         <li><img src="images/common/main01.jpg" />
@@ -387,7 +727,7 @@
            <li></li>
            <li>Eat & Life<br>
            패뷰러스 아트테인먼트 미미미의 소식을 확인하세요</li>
-        </div>
+        </ul>
         <div class="juice">
             <ul>
                 <li><img src="images/common/20_2.png"></li>
@@ -398,7 +738,7 @@
                 청량감을 선사합니다!</li>
             </ul>
             <ul>
-                <li><img src="images/common/20_0.png"></li>
+                <li><img src="images/common/2024_Waterful.png"></li>
                 <li>Wonderful<br>
                 워터플(l)</li>
                 <li>시원한 수박과 상큼한 라임향이<br>
@@ -424,7 +764,23 @@
                 행복한 순간을 느껴보세요.</li>
             </ul>
         </div>
-        
+    </div>
+        <div class="garden">
+            <ul class="gar">MeMeMi Garden
+               <li></li>
+               <li>문화와 라이프스타일이 공존하는<br>
+               아트테인먼트 미미미 가든</li>
+            </ul>
+            <ul class="res">
+             <li><p>미미미 가든</p><a href="#">View now</a></li>
+             <li><p>MeMeMi Garden<br>Special Offers<br>가든에서 제공하는<br>특별한 혜택을 만나보세요</p><a href="#">View now</a></li>
+             <li><p>Party & Culture<br>일상의 깊이를 더하는<br>하이엔드 라이프스타일을<br>경험하세요</p><a href="#">View now</a></li>
+             <li><a href="#">View now</a></li>
+             <li><a href="#">View now</a></li>
+             <li><a href="#">View now</a></li>
+            </ul>
+            
+        </div>
     </div>
     </div>
     <script>
